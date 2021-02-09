@@ -22,12 +22,19 @@ export class WeatherWidgetMainComponent implements OnInit {
 
   setWeatherData(data){
     this.WeatherData = data;
+
     let sunsetTime = new Date(this.WeatherData.sys.sunset*1000);
     this.WeatherData.sunset_time = sunsetTime.toLocaleString();
     console.log(sunsetTime);
+
     let sunriseTime = new Date(this.WeatherData.sys.sunrise*1000);
     this.WeatherData.sunrise_time = sunriseTime.toLocaleString();
     console.log(sunriseTime);
+
+    let currentDate = new Date();
+    this.WeatherData.isDaytime = (currentDate.toLocaleTimeString() < sunsetTime.toLocaleTimeString());
+    console.log("is it daytime? " + this.WeatherData.isDaytime);
+    
   }
 
 }
