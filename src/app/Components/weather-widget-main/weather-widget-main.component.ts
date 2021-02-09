@@ -25,6 +25,9 @@ export class WeatherWidgetMainComponent implements OnInit {
     let sunsetTime = new Date(this.WeatherData.sys.sunset*1000);
     this.WeatherData.sunset_time = sunsetTime.toLocaleString();
     console.log(sunsetTime);
+    let sunriseTime = new Date(this.WeatherData.sys.sunrise*1000);
+    this.WeatherData.sunrise_time = sunriseTime.toLocaleString();
+    console.log(sunriseTime);
   }
 
 }
