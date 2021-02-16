@@ -1,1 +1,9 @@
-<div id="divWeatherMain"></div>
+<div id="divWeatherMain">
+    <div class="weatherWidgetRow">{{ WeatherData.temp_celsius }}°</div>
+    <div class="weatherWidgetRow">{{ WeatherData.temp_min }} / {{ WeatherData.temp_max }}°</div>
+    <div class="weatherWidgetRow">{{ WeatherData.temp_feels_like }}°</div>
+    <div class="weatherWidgetRow">{{ WeatherData.name }}</div>
+    <div class="weatherWidgetRow">Humidity: {{ WeatherData.main.humidity }}%</div>
+
+
+</div>
