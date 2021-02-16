@@ -44,10 +44,8 @@ export class WeatherWidgetMainComponent implements OnInit {
     this.WeatherData.temp_max= (this.WeatherData.main.temp_max - 273.15).toFixed(0);
     console.log(this.WeatherData.temp_max);
 
-
-
-    // this.WeatherData.temp_feels_like = (this.WeatherData.main.feels_Like - 273.15).toFixed(0);
-    // console.log(this.WeatherData.temp_feels_like);
+    this.WeatherData.temp_feels_like = (this.WeatherData.main.feels_like - 273.15).toFixed(0);
+    console.log(this.WeatherData.temp_feels_like);
   }
 
 }
